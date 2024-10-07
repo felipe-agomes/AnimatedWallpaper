@@ -65,3 +65,4 @@
 /home/fagomes/Workspace/CSharp/AnimatedThings/obj/Debug/net8.0/Animated.414CDCE0.Up2Date
 /home/fagomes/Workspace/CSharp/AnimatedThings/obj/Debug/net8.0/AnimatedThings.genruntimeconfig.cache
 /home/fagomes/Workspace/CSharp/AnimatedThings/obj/Debug/net8.0/ref/AnimatedThings.dll
+/home/fagomes/Workspace/CSharp/AnimatedThings/obj/Debug/net8.0/AnimatedThings.sourcelink.json
