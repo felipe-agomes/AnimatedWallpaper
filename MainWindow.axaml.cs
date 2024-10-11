@@ -51,10 +51,11 @@ public partial class MainWindow : Window
     private void TimerTick(Object sender, EventArgs e)
     {
         _fish.ApplyGravity();
+        // _fish.FollowCursor();
         List<Body> bodies = _fish.GetBodies();
         foreach (Body body in bodies)
         {
-            _canvasService.InsertBody(body);
+            _canvasService.UpdateBody(body);
         }
     }
 }
