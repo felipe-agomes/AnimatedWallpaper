@@ -15,12 +15,12 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AnimatedThings
-build_property.ProjectDir = /home/fagomes/Workspace/CSharp/AnimatedThings/
+build_property.ProjectDir = C:\workspace\CSharp\AnimatedWallpaper\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[/home/fagomes/Workspace/CSharp/AnimatedThings/App.axaml]
+[C:/workspace/CSharp/AnimatedWallpaper/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/fagomes/Workspace/CSharp/AnimatedThings/MainWindow.axaml]
+[C:/workspace/CSharp/AnimatedWallpaper/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

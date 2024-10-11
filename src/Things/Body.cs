@@ -8,16 +8,18 @@ namespace AnimatedThings.src.Things;
 public class Body : IBody
 {
     private Control control;
-    private double top;
-    private double left;
-    private double width;
-    private double height;
+    private double Top {get; set;}
+    private double Left {get; set;}
+    private double Width {get; set;}
+    private double Height {get; set;}
 
-    public Body()
+    public Body(double width, double height, double top, double left, IBrush brush, double strokeThickness)
     {
-        this.top = 0;
-        this.left = 0;
-        this.control = new Ellipse { Width = 100, Height = 100, Stroke = Brushes.White, StrokeThickness = 5 };
+        this.Width = width;
+        this.Height = height;
+        this.Top = top;
+        this.Left = left;
+        control = new Ellipse { Width = width, Height = height, Stroke = brush, StrokeThickness = strokeThickness };
     }
 
     public Control GetControl()
@@ -27,20 +29,24 @@ public class Body : IBody
 
     public double GetLeft()
     {
-        return left;
+        return Left;
     }
 
     public double GetTop()
     {
-        return top;
+        return Top;
+    }
+
+    public void SetTop(double top) {
+        Top = top;
     }
 
     public double GetWidth()
     {
-        return width;
+        return Width;
     }
 
     public double GetHeight() {
-        return height;
+        return Height;
     }
 }

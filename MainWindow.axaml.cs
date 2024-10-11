@@ -9,6 +9,8 @@ namespace AnimatedThings;
 
 public partial class MainWindow : Window
 {
+    private Fish _fish;
+    private CanvasService _canvasService;
     public MainWindow()
     {
         InitializeComponent();
@@ -31,21 +33,28 @@ public partial class MainWindow : Window
     private void InitialLoad()
     {
         FishFactory fishFactory = new ();
-        Fish fish = fishFactory.Create();
 
-        CanvasService canvasService = new(Principal);
+        double leftCenter = Principal.Bounds.Width / 2;
+        double topCenter = Principal.Bounds.Height / 2;
+        fishFactory.SetInitialPosition(topCenter, leftCenter);
+        _fish = fishFactory.Create();
 
-        List<Body> controls = fish.GetBodies();
-
-        foreach (Body body in controls)
+        _canvasService = new (Principal);
+        List<Body> bodies = _fish.GetBodies();
+        foreach (Body body in bodies)
         {
-            canvasService.InsertBody(body);
+            _canvasService.InsertBody(body);
         }
     }
 
 
     private void TimerTick(Object sender, EventArgs e)
     {
-
+        _fish.ApplyGravity();
+        List<Body> bodies = _fish.GetBodies();
+        foreach (Body body in bodies)
+        {
+            _canvasService.InsertBody(body);
+        }
     }
 }
